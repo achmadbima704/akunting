@@ -107,7 +107,7 @@
                 }
 
                 $.ajax({
-                    url: edit ? `/api/cashout/update/${id.val()}` : '/api/cashout',
+                    url: edit ? `/api/api/cashout/update/${id.val()}` : '/api/api/cashout',
                     method: edit ? 'PUT' : 'POST',
                     data: payload
                 }).then(function () {
@@ -134,7 +134,7 @@
                 let data = tableCashout.row($(this).closest('tr')).data()
 
                 $.ajax({
-                    url: `api/cashout/delete/${data.id}`,
+                    url: `/api/api/cashout/delete/${data.id}`,
                     method: 'DELETE',
                 }).then(function () {
                     tableCashout.ajax.reload()

@@ -20,7 +20,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-    fetch('/api/chart-data/{{$date}}')
+    fetch('/api/api/chart-data/{{$date}}')
         .then((res) => res.json())
         .then((data) => {
             console.log(data)
